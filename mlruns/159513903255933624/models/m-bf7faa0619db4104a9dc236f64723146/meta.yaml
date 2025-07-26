@@ -1,0 +1,10 @@
+artifact_location: file:///Users/niranjanjoshi/Documents/GitHub/MLOPS-Pipeline/mlruns/159513903255933624/models/m-bf7faa0619db4104a9dc236f64723146/artifacts
+creation_timestamp: 1753498159925
+experiment_id: '159513903255933624'
+last_updated_timestamp: 1753498162548
+model_id: m-bf7faa0619db4104a9dc236f64723146
+model_type: null
+name: ridge-model
+source_run_id: ad4b724e0e654b62ba5892a34b3e1447
+status: 2
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/niranjanjoshi/Documents/GitHub/MLOPS-Pipeline/mlruns/898071983479120477/89ff173fe31f49749ba9013429c124ab/artifacts
+end_time: 1753461445917
+entry_point_name: ''
+experiment_id: '898071983479120477'
+lifecycle_stage: active
+run_id: 89ff173fe31f49749ba9013429c124ab
+run_name: stylish-stag-160
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753461443001
+status: 4
+tags: []
+user_id: niranjanjoshi

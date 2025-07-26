@@ -1,0 +1,4 @@
+# Configuration file for model hyperparameters
+alpha: 1.0
+test_size: 0.2
+random_state: 42

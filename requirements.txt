@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+joblib
+pandas
+scikit-learn
+mlflow
+dvc
+PyYAML
+prometheus_client

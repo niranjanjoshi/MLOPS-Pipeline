@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/niranjanjoshi/Documents/GitHub/MLOPS-Pipeline/mlruns/159513903255933624/4d43df7bfb1d493a81365da043d17aa2/artifacts
+end_time: 1753498417357
+entry_point_name: ''
+experiment_id: '159513903255933624'
+lifecycle_stage: active
+run_id: 4d43df7bfb1d493a81365da043d17aa2
+run_name: abundant-dolphin-751
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753498414757
+status: 3
+tags: []
+user_id: niranjanjoshi
