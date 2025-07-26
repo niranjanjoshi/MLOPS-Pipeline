@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/niranjanjoshi/Documents/GitHub/MLOPS-Pipeline/mlruns/159513903255933624/660f4466995747798d62fb189c157a30/artifacts
+end_time: 1753517506355
+entry_point_name: ''
+experiment_id: '159513903255933624'
+lifecycle_stage: active
+run_id: 660f4466995747798d62fb189c157a30
+run_name: marvelous-hen-849
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753517503712
+status: 3
+tags: []
+user_id: niranjanjoshi
