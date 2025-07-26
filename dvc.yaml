@@ -1,10 +1,11 @@
 stages:
   train:
-    cmd: python src/train.py
+    cmd: PYTHONPATH=. python src/train.py
     deps:
       - src/train.py
       - src/model.py
       - src/utils.py
       - src/config.yaml
+      - data/housing.csv
     outs:
       - models/ridge_model.pkl
