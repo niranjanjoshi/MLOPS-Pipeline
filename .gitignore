@@ -1,1 +1,22 @@
+# OS-specific
+.DS_Store
+
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# MLflow
 mlruns/
+
+# DVC cache
+.dvc/cache/
+
+# Model artifacts
+models/
+
+# VSCode settings
+.vscode/
