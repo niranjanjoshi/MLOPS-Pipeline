@@ -1,8 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 import pandas as pd
 from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
 from src.model import load_model
 import os
+from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 
 app = FastAPI()
 
@@ -22,4 +23,4 @@ def predict(input_data: dict):
 
 @app.get("/metrics")
 def metrics():
-    return generate_latest(), 200, {'Content-Type': CONTENT_TYPE_LATEST}
+    return Response(content=generate_latest(), media_type=CONTENT_TYPE_LATEST)
