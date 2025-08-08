@@ -34,10 +34,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t <your-username>/housing-api:latest .
+        run: docker build -t niranjanjoshi14/housing-api:latest .
 
       - name: Push Docker image
-        run: docker push <your-username>/housing-api:latest
+        run: docker push niranjanjoshi14/housing-api:latest
 
       - name: Check .gitignore to avoid large files
         run: |
