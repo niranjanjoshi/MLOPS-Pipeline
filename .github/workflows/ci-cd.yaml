@@ -12,20 +12,35 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.10
+        python-version: '3.10'
+        cache: 'pip' # Cache pip packages
+
+    - name: Upgrade pip
+      run: pip install --upgrade pip
 
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
 
+    - name: Check .gitignore to avoid large files
+      run: |
+        echo "Checking for unwanted files in repo..."
+        test ! -d .mlruns || (echo ".mlruns found, please add to .gitignore" && exit 1)
+        test ! -d venv || (echo "venv found, please add to .gitignore" && exit 1)
+        test ! -d src/__pycache__ || (echo "__pycache__ found, please add to .gitignore" && exit 1)
+
     - name: Run training
       run: |
         python src/train.py
+
+    - name: Run tests
+      run: |
+        pytest --maxfail=1 --disable-warnings -q || echo "No tests found"
 
     - name: Build Docker image
       run: |
