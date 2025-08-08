@@ -3,15 +3,15 @@ import mlflow
 import mlflow.sklearn
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src import utils, model
 
 with open("src/config.yaml") as f:
     config = yaml.safe_load(f)
 
 X_train, X_test, y_train, y_test = utils.load_data(
-    test_size=config["test_size"],
-    random_state=config["random_state"]
+    test_size=config["test_size"], random_state=config["random_state"]
 )
 
 mlflow.set_experiment("CaliforniaHousing")

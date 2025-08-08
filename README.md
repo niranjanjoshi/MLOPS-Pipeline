@@ -1,4 +1,3 @@
-
 # 🏠 California Housing Price Prediction - End-to-End MLOps Pipeline
 
 This project demonstrates a full MLOps pipeline using a regression model trained on the California Housing dataset. It includes training, model tracking, versioning, deployment, and monitoring.
@@ -7,14 +6,14 @@ This project demonstrates a full MLOps pipeline using a regression model trained
 
 ## 🔧 Tech Stack
 
-| Task              | Tool(s)                            |
-|-------------------|------------------------------------|
-| Version Control    | Git + GitHub                       |
-| Data Versioning    | DVC                                |
-| Experiment Tracking| MLflow                             |
-| API Deployment     | FastAPI + Docker                   |
-| CI/CD              | GitHub Actions                     |
-| Monitoring         | Prometheus + Grafana               |
+| Task                | Tool(s)              |
+| ------------------- | -------------------- |
+| Version Control     | Git + GitHub         |
+| Data Versioning     | DVC                  |
+| Experiment Tracking | MLflow               |
+| API Deployment      | FastAPI + Docker     |
+| CI/CD               | GitHub Actions       |
+| Monitoring          | Prometheus + Grafana |
 
 ---
 
@@ -108,6 +107,7 @@ docker-compose up --build
 ```
 
 Services exposed:
+
 - 🧪 API Docs (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
 - 📊 Prometheus: [http://localhost:9090](http://localhost:9090)
 - 📉 Grafana: [http://localhost:3000](http://localhost:3000) (Default login: `admin/admin`)
@@ -175,6 +175,7 @@ Check if Prometheus sees your API at [http://localhost:9090/targets](http://loca
 ## 🔄 CI/CD with GitHub Actions
 
 In `.github/workflows/ci.yml`, set up a job to:
+
 - Install dependencies
 - Run `train.py`
 - Validate model behavior
