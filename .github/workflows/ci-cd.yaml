@@ -2,7 +2,11 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    ranches: [main]
+    paths:
+      - "data/**" # Trigger on new/changed data
+      - "src/train.py" # Trigger if training script changes
+      - ".github/workflows/ci-cd.yml"
   pull_request:
     branches: [main]
 
