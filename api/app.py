@@ -1,11 +1,36 @@
 from fastapi import FastAPI, Response
 import pandas as pd
-from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
+from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST, Histogram
 from src.model import load_model
 import os
-from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
+import sqlite3
+from datetime import datetime
+import json
+import time
+from pydantic import BaseModel
+
 
 app = FastAPI()
+
+PREDICTION_COUNTER = Counter("prediction_requests_total", "Total prediction requests")
+PREDICTION_LATENCY = Histogram(
+    "prediction_latency_seconds", "Prediction request latency in seconds"
+)
+
+# Initialize SQLite DB and table (run once at startup)
+conn = sqlite3.connect("prediction_logs.db", check_same_thread=False)
+cursor = conn.cursor()
+cursor.execute(
+    """
+CREATE TABLE IF NOT EXISTS prediction_logs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp TEXT,
+    input_json TEXT,
+    prediction REAL
+)
+"""
+)
+conn.commit()
 
 model_path = "models/ridge_model.pkl"
 if not os.path.exists(model_path):
@@ -17,11 +42,52 @@ model = load_model(model_path)
 predict_counter = Counter("predict_requests", "Number of prediction requests")
 
 
+class HousingFeatures(BaseModel):
+    MedInc: float
+    HouseAge: float
+    AveRooms: float
+    AveBedrms: float
+    Population: float
+    AveOccup: float
+    Latitude: float
+    Longitude: float
+
+
+FEATURE_ORDER = [
+    "MedInc",
+    "HouseAge",
+    "AveRooms",
+    "AveBedrms",
+    "Population",
+    "AveOccup",
+    "Latitude",
+    "Longitude",
+]
+
+
 @app.post("/predict")
-def predict(input_data: dict):
-    df = pd.DataFrame([input_data])
+def predict(input_data: HousingFeatures):
+    PREDICTION_COUNTER.inc()
+    start_time = time.time()
+
+    # Convert Pydantic model to dict and reorder columns
+    data_dict = input_data.dict()
+    df = pd.DataFrame(
+        [[data_dict[col] for col in FEATURE_ORDER]], columns=FEATURE_ORDER
+    )
+
     predict_counter.inc()
     prediction = model.predict(df)[0]
+
+    latency = time.time() - start_time
+    PREDICTION_LATENCY.observe(latency)
+
+    cursor.execute(
+        "INSERT INTO prediction_logs (timestamp, input_json, prediction) VALUES (?, ?, ?)",
+        (datetime.utcnow().isoformat(), json.dumps(data_dict), prediction),
+    )
+    conn.commit()
+
     return {"prediction": prediction}
 
 

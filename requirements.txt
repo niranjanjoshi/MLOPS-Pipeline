@@ -7,3 +7,4 @@ mlflow
 dvc
 PyYAML
 prometheus_client
+pydantic
