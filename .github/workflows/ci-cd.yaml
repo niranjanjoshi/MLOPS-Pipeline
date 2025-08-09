@@ -3,13 +3,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches: [main]
-    paths:
-      - "**.py"
-      - "data/**" # Added: Trigger on new/changed data
-      - "requirements.txt"
   pull_request:
     branches: [main]
-  workflow_dispatch: # Added: Manual trigger option
 
 jobs:
   build:
@@ -55,19 +50,10 @@ jobs:
         run: |
           python src/train.py
 
-      - name: Save trained model artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: trained-model
-          path: models/latest_model.pkl
-
       - name: Run tests
         run: |
           pytest --maxfail=1 --disable-warnings -q || echo "No tests found"
 
-      - name: Build Docker image with model
+      - name: Build Docker image
         run: |
           docker build -t housing-api .
-
-      - name: Push Docker image with model
-        run: docker push housing-api:latest
