@@ -127,7 +127,9 @@ docker-compose up --build
 * Live public docker image on dockerhub can be found [here.🔗](https://hub.docker.com/r/niranjanjoshi14/housing-api)
 * [niranjanjoshi14/housing-api:latest -> manifest digest](https://hub.docker.com/layers/niranjanjoshi14/housing-api/latest/images/sha256-63f94dc9da8f6ba82d4eac995097e238d2d74aa0d903b086bd412b33e681def3)
 
-![](./images/docker_image_mainfest_latest.PNG)
+| Published Image Overview | Published Image - Manifest Digest | Docker desktop - testing local image |
+|------|-----------|----------------|
+| ![](./images/docker_image_overview.PNG)  | ![](./images/docker_image_mainfest_latest.PNG) | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/docker%20desktop%20-%20local%20image.png)  |
 
 Services exposed:
 
@@ -161,6 +163,13 @@ Services exposed:
   "prediction": 4.534
 }
 ```
+#### FastAPI endpoints & config:
+
+![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20master%20config.png)
+
+![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20config.png)
+
+![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20-%20prediction%20results.png)
 
 ---
 
@@ -193,6 +202,11 @@ scrape_configs:
 
 Check if Prometheus sees your API at [http://localhost:9090/targets](http://localhost:9090/targets)
 
+| Grafana logs | Grafana logs |
+|------|-----------|
+| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%204.png)  | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%203.png) |
+| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%202.png) | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%201.png) |
+
 ---
 
 ## 🔄 CI/CD with GitHub Actions
@@ -220,6 +234,8 @@ jobs:
       - run: python train.py
 ```
 
+![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/ci_cd%20through%20github%20actions.png)
+
 ---
 
 ## 🛑 Shutdown Instructions
@@ -240,8 +256,14 @@ Or if running in foreground, press `Ctrl + C`.
 
 ---
 
-## 📌 TODOs
+## Citations and References
 
-- [ ] Add Grafana dashboard JSON config
-- [ ] Push Docker image to registry in CI
-- [ ] Add model drift detection
+* DVC Docs: https://dvc.org/doc
+* Grafana Docs: https://grafana.com/docs/
+* Prometheus Docs: https://prometheus.io/docs/introduction/overview/
+* Docker and Dockerhub: https://docs.docker.com/reference/cli/docker/
+* Github Actions Docs: https://docs.github.com/en/actions
+* MLflow Docs: https://mlflow.org/docs/latest/
+* FastAPI Docs: https://fastapi.tiangolo.com/
+
+---
