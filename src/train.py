@@ -10,7 +10,8 @@ from sklearn.metrics import mean_squared_error
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src import utils
 
-mlflow.set_tracking_uri("http://mlflow-server:5555")
+# Enable when required
+# mlflow.set_tracking_uri("http://mlflow-server:5555")
 
 with open("src/config.yaml") as f:
     config = yaml.safe_load(f)
