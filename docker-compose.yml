@@ -31,5 +31,17 @@ services:
     depends_on:
       - prometheus
 
+  mlflow:
+    image: python:3.10-slim
+    container_name: mlflow-server
+    working_dir: /app
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./mlruns:/app/mlruns
+      - ./mlflow_data:/app/data
+    command: >
+      sh -c "pip install mlflow && python -m mlflow server --backend-store-uri sqlite:///data/mlflow.db --default-artifact-root /app/mlruns --host 0.0.0.0 --port 5555"
+
 volumes:
   grafana-storage:
