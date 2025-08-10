@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Response
+from fastapi import FastAPI, Response, HTTPException
 import pandas as pd
 from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST, Histogram
 from src.model import load_model
@@ -8,6 +8,7 @@ from datetime import datetime
 import json
 import time
 from pydantic import BaseModel
+import subprocess
 
 
 app = FastAPI()
@@ -94,3 +95,22 @@ def predict(input_data: HousingFeatures):
 @app.get("/metrics")
 def metrics():
     return Response(content=generate_latest(), media_type=CONTENT_TYPE_LATEST)
+
+
+@app.post("/retrain")
+def retrain():
+    try:
+        # Run train.py using the same python executable
+        result = subprocess.run(
+            ["python", "src/train.py"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        return {
+            "message": "Training completed successfully.",
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+        }
+    except subprocess.CalledProcessError as e:
+        raise HTTPException(status_code=500, detail=f"Training failed: {e.stderr}")
