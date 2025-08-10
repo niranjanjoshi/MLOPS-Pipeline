@@ -13,9 +13,10 @@
 
 ---
 
-## Problem statement: *"Build, Track, Package, Deploy and Monitor an ML Model using MLOps Best Practices"*
+#### ✅ Problem statement: *"Build, Track, Package, Deploy and Monitor an ML Model using MLOps Best Practices"*
 
-## 🏠 California Housing Price Prediction - End-to-End MLOps Pipeline [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+## 🏠 California Housing Price Prediction [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+### End-to-End MLOps Pipeline
 
 This project demonstrates a fully functional MLOps pipeline using a regression model trained on the California Housing dataset. It includes model training, model tracking, data/model versioning, API based deployments, and performance monitoring.
 
