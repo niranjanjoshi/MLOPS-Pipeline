@@ -24,6 +24,8 @@ This project demonstrates a fully functional MLOps pipeline using a regression m
 
 👉 [🎬 Video Demo🔗](https://wilpbitspilaniacin0-my.sharepoint.com/:v:/g/personal/2023ac05011_wilp_bits-pilani_ac_in/EdPJpibOGxhFuMTmqLI3gJQB5k0xFw2tzZB1LUBy0keiMA?e=eCEfB)
 
+👉 [📝 Architecture Summary Document](./docs/summary.pdf)
+
 ---
 
 ## 🔧 Tech Stack
