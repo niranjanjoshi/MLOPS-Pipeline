@@ -114,6 +114,11 @@ test_size: 0.2
 random_state: 42
 ```
 
+| MLFLow Experiments tracking | MLFlow Metrics (MSE) |
+|------|-----------|
+| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%201st%20experiment%20logs.png)  | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%20MSE%20results.png) |
+| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%202nd%20experiment%20logs.png) | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%20experiments%20tracking.png) |
+
 ---
 
 ## 📈 Model Serving via FastAPI + Docker
@@ -163,13 +168,12 @@ Services exposed:
   "prediction": 4.534
 }
 ```
-#### FastAPI endpoints & config:
 
-![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20master%20config.png)
-
-![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20config.png)
-
-![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20-%20prediction%20results.png)
+| FastAPI endpoints & config |
+|------|
+| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20master%20config.png) |
+| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20config.png) |
+| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20-%20prediction%20results.png) |
 
 ---
 
