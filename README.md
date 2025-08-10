@@ -1,8 +1,8 @@
-#  S2-24_AIMLCZG525 - MLOps | BITS Pilani WILP
-
 ![](./images/BITS_banner.png)
 
-#### Group No. - 120
+#  S2-24_AIMLCZG523 - MLOps | BITS Pilani WILP
+
+## Group No. - 120
 
 | Name | StudentID | Contribution % |
 |------|-----------|----------------|
@@ -11,7 +11,9 @@
 | KESHARKAR SURAJ SANJAY | 2023AD05004 | 100% |
 | SAURABH SUNIT JOTSHI | 2023AC05565 | 100%  |
 
-#### Problem statement: *"Build, Track, Package, Deploy and Monitor an ML Model using MLOps Best Practices"*
+---
+
+## Problem statement: *"Build, Track, Package, Deploy and Monitor an ML Model using MLOps Best Practices"*
 
 ## 🏠 California Housing Price Prediction - End-to-End MLOps Pipeline
 
