@@ -33,13 +33,7 @@ CREATE TABLE IF NOT EXISTS prediction_logs (
 )
 conn.commit()
 
-model_path = "models/ridge_model.pkl"
-if not os.path.exists(model_path):
-    raise FileNotFoundError(
-        "Model file not found. Train the model first using `train.py`."
-    )
 
-model = load_model(model_path)
 predict_counter = Counter("predict_requests", "Number of prediction requests")
 
 
@@ -68,6 +62,12 @@ FEATURE_ORDER = [
 
 @app.post("/predict")
 def predict(input_data: HousingFeatures):
+    model_path = "models/BestHousingModel.pkl"
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(
+            "Model file not found. Train the model first using `train.py`."
+        )
+    model = load_model(model_path)
     PREDICTION_COUNTER.inc()
     start_time = time.time()
 
