@@ -1,6 +1,21 @@
-# 🏠 California Housing Price Prediction - End-to-End MLOps Pipeline
+#  S2-24_AIMLCZG525 - MLOps | BITS Pilani WILP
 
-This project demonstrates a full MLOps pipeline using a regression model trained on the California Housing dataset. It includes training, model tracking, versioning, deployment, and monitoring.
+![](./images/BITS_banner.png)
+
+#### Group No. - 120
+
+| Name | StudentID | Contribution % |
+|------|-----------|----------------|
+| JOSHI NIRANJAN SURYAKANT  | 2023AC05011 | 100% |
+| PRATEEK RALHAN | 2023AC05673 | 100% |
+| KESHARKAR SURAJ SANJAY | 2023AD05004 | 100% |
+| SAURABH SUNIT JOTSHI | 2023AC05565 | 100%  |
+
+#### Problem statement: *"Build, Track, Package, Deploy and Monitor an ML Model using MLOps Best Practices"*
+
+## 🏠 California Housing Price Prediction - End-to-End MLOps Pipeline
+
+This project demonstrates a fully functional MLOps pipeline using a regression model trained on the California Housing dataset. It includes model training, model tracking, data/model versioning, API based deployments, and performance monitoring.
 
 ---
 
@@ -13,7 +28,7 @@ This project demonstrates a full MLOps pipeline using a regression model trained
 | Experiment Tracking | MLflow               |
 | API Deployment      | FastAPI + Docker     |
 | CI/CD               | GitHub Actions       |
-| Monitoring          | Prometheus + Grafana |
+| Monitoring (Logging module)         | Prometheus + Grafana |
 
 ---
 
