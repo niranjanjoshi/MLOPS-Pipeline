@@ -116,8 +116,8 @@ random_state: 42
 
 | MLFLow Experiments tracking | MLFlow Metrics (MSE) |
 |------|-----------|
-| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%201st%20experiment%20logs.png)  | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%20MSE%20results.png) |
-| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%202nd%20experiment%20logs.png) | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/MLflow%20-%20experiments%20tracking.png) |
+| ![](./images/ml_flow_1st_experiment_logs.png)  | ![](./images/mlflow_mse_results.png) |
+| ![](./images/ml_flow_2nd_experiment_logs.png) | ![](./images/mlflow_experiments_tracking.png) |
 
 ---
 
@@ -134,7 +134,7 @@ docker-compose up --build
 
 | Published Image Overview | Published Image - Manifest Digest | Docker desktop - testing local image |
 |------|-----------|----------------|
-| ![](./images/docker_image_overview.PNG)  | ![](./images/docker_image_mainfest_latest.PNG) | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/docker%20desktop%20-%20local%20image.png)  |
+| ![](./images/docker_image_overview.PNG)  | ![](./images/docker_image_mainfest_latest.PNG) | ![](./images/docker_desktop_local_image.png)  |
 
 Services exposed:
 
@@ -171,9 +171,9 @@ Services exposed:
 
 | FastAPI endpoints & config |
 |------|
-| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20master%20config.png) |
-| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20config.png) |
-| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/fastapi%20-%20prediction%20results.png) |
+| ![](./images/fastapi_master_config.png) |
+| ![](./images/fastapi_config.png) |
+| ![](./images/fastapi_prediction_results.png) |
 
 ---
 
@@ -208,8 +208,8 @@ Check if Prometheus sees your API at [http://localhost:9090/targets](http://loca
 
 | Grafana logs | Grafana logs |
 |------|-----------|
-| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%204.png)  | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%203.png) |
-| ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%202.png) | ![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/grafana%20logs%20-%201.png) |
+| ![](./images/grafana_logs_four.png)  | ![](./images/grafana_logs_three.png) |
+| ![](./images/grafana_logs_two.png) | ![](./images/grafana_logs_one.png) |
 
 ---
 
@@ -238,7 +238,7 @@ jobs:
       - run: python train.py
 ```
 
-![](https://github.com/niranjanjoshi/MLOPS-Pipeline/blob/PR/minor_refinements/images/ci_cd%20through%20github%20actions.png)
+![](./images/ci_cd_github_actions.png)
 
 ---
 
