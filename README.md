@@ -126,6 +126,8 @@ docker-compose up --build
 * Live public docker image on dockerhub can be found [here.🔗](https://hub.docker.com/r/niranjanjoshi14/housing-api)
 * [niranjanjoshi14/housing-api:latest -> manifest digest](https://hub.docker.com/layers/niranjanjoshi14/housing-api/latest/images/sha256-63f94dc9da8f6ba82d4eac995097e238d2d74aa0d903b086bd412b33e681def3)
 
+![](./images/docker_image_mainfest_latest.PNG)
+
 Services exposed:
 
 - 🧪 API Docs (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
