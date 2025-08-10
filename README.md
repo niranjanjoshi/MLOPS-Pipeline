@@ -22,10 +22,7 @@ This project demonstrates a fully functional MLOps pipeline using a regression m
 
 ---
 
-## 🎬 Video Demo
-
-<iframe width="560" height="315" src="https://wilpbitspilaniacin0-my.sharepoint.com/:v:/g/personal/2023ac05011_wilp_bits-pilani_ac_in/EdPJpibOGxhFuMTmqLI3gJQB5k0xFw2tzZB1LUBy0keiMA?e=eCEfB" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+### ![🎬 Video Demo🔗](https://wilpbitspilaniacin0-my.sharepoint.com/:v:/g/personal/2023ac05011_wilp_bits-pilani_ac_in/EdPJpibOGxhFuMTmqLI3gJQB5k0xFw2tzZB1LUBy0keiMA?e=eCEfB)
 
 ## 🔧 Tech Stack
 
