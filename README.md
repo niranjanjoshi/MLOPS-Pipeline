@@ -1,3 +1,5 @@
+<div align="center">
+
 ![](./images/BITS_banner.png)
 
 #  S2-24_AIMLCZG523 - MLOps | BITS Pilani WILP
@@ -10,6 +12,8 @@
 | PRATEEK RALHAN | 2023AC05673 | 100% |
 | KESHARKAR SURAJ SANJAY | 2023AD05004 | 100% |
 | SAURABH SUNIT JOTSHI | 2023AC05565 | 100%  |
+
+</div>
 
 ---
 
